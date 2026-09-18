@@ -1,0 +1,12 @@
+.splide__pagination__page {
+    width: 12px !important;
+    height: 12px !important;
+    background-color: rgba(219, 221, 230, 0.50) !important;
+}
+
+.splide__pagination__page.is-active {
+    width: 12px !important;
+    height: 12px !important;
+    background-image: linear-gradient(90deg, #ff294f 0%, #1c83ff 100%) !important;
+    transform: unset !important;
+}

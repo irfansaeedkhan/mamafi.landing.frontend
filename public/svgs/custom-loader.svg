@@ -1,0 +1,12 @@
+<svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Loading">
+<ellipse id="Oval" cx="32.0002" cy="32.0002" rx="24.01" ry="24.01" stroke="#30323C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Oval_2" d="M56.5122 32.0002C56.5122 36.749 55.104 41.391 52.4658 45.3395C49.8275 49.2879 46.0777 52.3653 41.6904 54.1826C37.3032 55.9998 32.4756 56.4753 27.8181 55.5489C23.1606 54.6225 18.8824 52.3357 15.5246 48.9779C12.1667 45.62 9.87996 41.3418 8.95353 36.6844C8.0271 32.0269 8.50258 27.1993 10.3198 22.812C12.1371 18.4248 15.2145 14.6749 19.1629 12.0366C23.1114 9.3984 27.7535 7.99023 32.5022 7.99023" stroke="url(#paint0_linear_942_4225)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_942_4225" x1="8.49219" y1="32.0002" x2="56.5122" y2="32.0002" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF294F"/>
+<stop offset="1" stop-color="#1C83FF"/>
+</linearGradient>
+</defs>
+</svg>

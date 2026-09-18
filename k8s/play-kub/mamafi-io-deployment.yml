@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mamafi-io-deployment
+  namespace: mamafi-io-nsp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      serviceName: mamafi-io-service-name
+  template:
+    metadata:
+      labels:
+        serviceName: mamafi-io-service-name
+    spec:
+      containers:
+        - name: mamafi-io-container
+          image: { IMAGE_TAG }
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: play-kub-mamafi-pull-secret
