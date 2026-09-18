@@ -46,7 +46,7 @@ const RealWorldNarrative: React.FC = () => {
                 height={540}
                 className="relative z-10 h-auto w-full object-contain"
                 loading="lazy"
-                quality={70}
+                quality={75}
                 sizes="(max-width: 924px) 360px, 420px"
               />
             </div>

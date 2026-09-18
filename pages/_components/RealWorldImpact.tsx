@@ -53,7 +53,7 @@ const RealWorldImpact: React.FC = () => {
               className="object-contain object-right"
               sizes="(min-width: 924px) 780px, 0px"
               loading="lazy"
-              quality={70}
+              quality={75}
             />
           </div>
 
@@ -76,7 +76,7 @@ const RealWorldImpact: React.FC = () => {
                 height={581}
                 className="relative z-10 h-auto w-full object-contain"
                 loading="lazy"
-                quality={70}
+                quality={75}
                 sizes="(max-width: 924px) 100vw, 460px"
               />
             </div>

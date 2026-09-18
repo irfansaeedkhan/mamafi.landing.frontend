@@ -1,0 +1,34 @@
+# Dependencies & VCS
+node_modules
+.git
+.gitignore
+.husky
+
+# Next / build artifacts
+.next
+out
+build
+coverage
+*.tsbuildinfo
+next-env.d.ts
+
+# Env & secrets (pass via --build-arg / runtime env instead)
+.env
+.env.*
+!.env.example
+
+# IDE / OS / reports
+.vscode
+.idea
+.DS_Store
+*.pem
+lighthouse-report.json
+lighthouse-desktop.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docs / agent noise (not needed in image)
+AGENTS.md
+CLAUDE.md
+README.md

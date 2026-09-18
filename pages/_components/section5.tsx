@@ -25,7 +25,7 @@ const Section5: React.FC = () => {
             height={676}
             loading="lazy"
             sizes="(max-width: 924px) 80vw, 44vw"
-            quality={70}
+            quality={75}
             className="w-full h-auto"
           />
         </div>
