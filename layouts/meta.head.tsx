@@ -20,7 +20,9 @@ const MetaHead = () => {
         name="keywords"
         content="MamaFi,meme coin,web3,login,sign up"
       />
-      <meta name="author" content="MamaFi" />
+      <meta name="author" content="Irfan Saeed Khan" />
+      <meta name="creator" content="Irfan Saeed Khan" />
+      <link rel="author" href="mailto:irfansaeedkhan@protonmail.com" />
       <meta name="robots" content="index,follow" />
       <meta name="google" content="notranslate" />
 
