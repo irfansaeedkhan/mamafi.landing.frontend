@@ -5,6 +5,7 @@ const nextConfig = {
   pageExtensions: ["page.tsx", "api.ts"],
   poweredByHeader: false,
   compress: true,
+  allowedDevOrigins: ["127.0.0.1", "localhost"],
   experimental: {
     optimizePackageImports: [
       "framer-motion",
@@ -107,7 +108,27 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
-      use: ["@svgr/webpack"],
+      use: [
+        {
+          loader: "@svgr/webpack",
+          options: {
+            // Keep file width/height so imported SVGs do not flex-stretch
+            dimensions: true,
+            svgoConfig: {
+              plugins: [
+                {
+                  name: "preset-default",
+                  params: {
+                    overrides: {
+                      removeViewBox: false,
+                    },
+                  },
+                },
+              ],
+            },
+          },
+        },
+      ],
     });
 
     return config;

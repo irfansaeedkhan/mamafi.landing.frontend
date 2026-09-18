@@ -67,7 +67,11 @@ export const Step5: React.FC<any> = ({ formMethods }) => {
               : "bg-[#00000029] border-[#a8a8a533] text-[#DBDDE6]"
           )}
         >
-          {followingX ? <XGradient /> : <Xwhite />}
+          {followingX ? (
+            <XGradient className="h-10 w-10 shrink-0" />
+          ) : (
+            <Xwhite className="h-10 w-10 shrink-0" />
+          )}
           <span
             className={clsx(followingX ? "text-gradient" : "text-[#DBDDE6]")}
           >
@@ -91,7 +95,11 @@ export const Step5: React.FC<any> = ({ formMethods }) => {
               : "bg-[#00000029] border-[#a8a8a533] text-[#DBDDE6]"
           )}
         >
-          {followingTelegram ? <TGradient /> : <TWhite />}
+          {followingTelegram ? (
+            <TGradient className="h-10 w-10 shrink-0" />
+          ) : (
+            <TWhite className="h-10 w-10 shrink-0" />
+          )}
           <span
             className={clsx(
               followingTelegram ? "text-gradient" : "text-[#DBDDE6]"

@@ -23,7 +23,7 @@ export const Step6: React.FC<any> = ({ formMethods }) => {
 
       <div className="flex flex-col items-start w-full">
         <div className="relative flex items-center gap-3 w-full">
-          <IconEnvelope className="absolute left-4 text-white size-5" />
+          <IconEnvelope className="absolute left-4 text-white w-5 h-5" />
           <input
             type="email"
             placeholder="your@example.com"
@@ -48,7 +48,7 @@ export const Step6: React.FC<any> = ({ formMethods }) => {
       </div>
       <div className="flex flex-col items-start w-full">
         <div className="relative flex items-center gap-3 w-full">
-          <IconTelegram className="absolute left-4 text-white size-5" />
+          <IconTelegram className="absolute left-4 text-white w-5 h-5" />
           <input
             type="text"
             placeholder="@your_telegram username"
@@ -72,7 +72,7 @@ export const Step6: React.FC<any> = ({ formMethods }) => {
       </div>
 
       <div className="flex gap-2 p-3 border border-yellow rounded-xl bg-yellow/10 items-center">
-        <IconExclamationCircle className="size-6 shrink-0 cursor-pointer text-yellow" />
+        <IconExclamationCircle className="w-6 h-6 shrink-0 cursor-pointer text-yellow" />
         <div className="flex flex-col gap-1 items-start text-left">
           <h3 className="pt-1 font-kanit font-black text-[#F0F1F5] text-xs">
             Note:

@@ -115,7 +115,7 @@ const BuyMamafiCoin: React.FC = () => {
                       disabled={isStep4Loading}
                       aria-label="Previous step"
                     >
-                      <AnimatedArrow className="size-16 rotate-180" />
+                      <AnimatedArrow className="h-16 w-16 shrink-0 rotate-180" />
                     </button>
                   )}
                   {!isFirstStep && !isLastStep && (
@@ -125,13 +125,14 @@ const BuyMamafiCoin: React.FC = () => {
                       disabled={isStep4Loading}
                       aria-label="Next step"
                     >
-                      <AnimatedArrow className="size-16 " />
+                      <AnimatedArrow className="h-16 w-16 shrink-0" />
                     </button>
                   )}
                 </div>
                 {isFirstStep && (
                   <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-50">
                     <Button
+                      type="button"
                       title="Get Started"
                       className="mx-auto py-3"
                       onClick={() => goTo(1)}

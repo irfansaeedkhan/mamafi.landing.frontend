@@ -8,11 +8,12 @@ const AnimatedArrow: React.FC<AnimatedArrowProps> = ({ className }) => {
   return (
     <svg
       className={className}
-      width="60"
-      height="55"
+      width={64}
+      height={64}
       viewBox="0 0 60 55"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ width: 64, height: 64, flexShrink: 0 }}
       aria-hidden
     >
       <g clipPath="url(#clip0_8_1163)">

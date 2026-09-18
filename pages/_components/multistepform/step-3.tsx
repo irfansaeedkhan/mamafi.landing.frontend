@@ -100,7 +100,12 @@ export const Step3: React.FC<any> = ({ formMethods }) => {
         const response = await axiosInstance.get("/network/tokens");
 
         if (response.status === 200 || response.status === 201) {
-          const data: Network[] = await response.data;
+          const data: Network[] = response.data;
+
+          if (!Array.isArray(data) || data.length === 0) {
+            setOptions(fallbackOptions);
+            return;
+          }
 
           const transformedOptions = data.flatMap((network) => {
             const tokenStandard =
@@ -151,17 +156,17 @@ export const Step3: React.FC<any> = ({ formMethods }) => {
             transformedOptions.length > 0 ? transformedOptions : fallbackOptions
           );
         } else {
-          throw new Error("Failed to fetch network tokens");
+          setOptions(fallbackOptions);
         }
-      } catch (error: any) {
-        console.error("Error fetching network tokens:", error);
+      } catch {
+        // Upstream API may be unreachable (e.g. CF 530) — keep the form usable
         setOptions(fallbackOptions);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchData();
+    void fetchData();
   }, []);
 
   const handleSelection = (option: Option) => {

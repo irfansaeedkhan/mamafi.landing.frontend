@@ -80,9 +80,9 @@ export const CustomDropdown: React.FC<DropdownProps> = ({
             {selectedLabel === "" ? placeholder : selectedLabel}
           </span>
           {isOpen ? (
-            <IconChevronUp className="text-gray-400 size-3" />
+            <IconChevronUp className="text-gray-400" size={12} />
           ) : (
-            <IconChevronDown className="text-gray-400 size-3" />
+            <IconChevronDown className="text-gray-400" size={12} />
           )}
         </div>
         {error && <p className="mt-1 text-xs text-red text-left">{error}</p>}

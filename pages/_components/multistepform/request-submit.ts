@@ -1,4 +1,4 @@
-import axios from "axios";
+import axiosInstance from "@/utils/axiosInstance";
 import toast from "react-hot-toast";
 
 interface SignupData {
@@ -18,17 +18,25 @@ interface RegisterResponse {
 export const requestSubmit = async (
   data: SignupData
 ): Promise<RegisterResponse | undefined> => {
-  try {
-    const res = await axios.post("auth/register", data);
+  const response = await axiosInstance.post("auth/register", data);
 
+  if (response.status === 200 || response.status === 201) {
     return { message: "details submitted" };
-  } catch (error: any) {
-    const errorMessage = "Failed to register";
-    if (error.response?.status === 500) {
-      toast.error(error.response?.data?.message ?? errorMessage);
-    } else if (error.response?.status === 400) {
-    } else {
-      console.error(error, error.response?.data?.message, "register");
-    }
   }
+
+  const apiMessage =
+    response.data &&
+    typeof response.data === "object" &&
+    "message" in response.data &&
+    typeof (response.data as { message?: unknown }).message === "string"
+      ? (response.data as { message: string }).message
+      : undefined;
+
+  if (response.status === 400 || response.status === 500) {
+    toast.error(apiMessage ?? "Failed to register");
+  } else {
+    toast.error("Unable to reach the server. Please try again later.");
+  }
+
+  return undefined;
 };

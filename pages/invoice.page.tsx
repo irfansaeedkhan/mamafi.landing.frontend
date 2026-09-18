@@ -88,14 +88,12 @@ const InvoicePage: NextPageWithLayout = () => {
 
           return () => clearInterval(interval);
         } else {
-          console.error("Failed to fetch invoice:", response.status);
           setTimeRemaining("Expired");
           setLoading(false);
         }
-      } catch (error) {
+      } catch {
         setError(true);
         setTimeRemaining("Expired");
-        console.error("Error fetching invoice:", error);
       } finally {
         setLoading(false);
       }
@@ -270,7 +268,7 @@ const InvoicePage: NextPageWithLayout = () => {
           }`}
         >
           <IconExclamationCircle
-            className={`size-6 shrink-0 cursor-pointer ${
+            className={`w-6 h-6 shrink-0 cursor-pointer ${
               timeRemaining === "Expired" ? "text-red" : "text-yellow"
             } `}
           />

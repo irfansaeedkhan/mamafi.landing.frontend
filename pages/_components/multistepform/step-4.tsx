@@ -49,15 +49,12 @@ export const Step4: React.FC<any> = ({ formMethods, setStep4Loading }) => {
     const timeout = setTimeout(async () => {
       try {
         const response = await axiosInstance.get(`/rate/${amount}`);
-        if (response.status === 200 && response.data.amount) {
+        if (response.status === 200 && response.data?.amount) {
           setMamaCoinValue(response.data.amount);
         } else {
-          // Fallback mock rate when API shape is unexpected
           setMamaCoinValue(amount * 1000);
         }
-      } catch (error) {
-        console.error("Error fetching MAMA Coin rate:", error);
-        // Keep form usable when live rate API is down
+      } catch {
         setMamaCoinValue(amount * 1000);
       } finally {
         setLoading(false);
@@ -203,7 +200,7 @@ export const Step4: React.FC<any> = ({ formMethods, setStep4Loading }) => {
       </div>
 
       <div className="flex gap-2 p-3 border border-yellow rounded-xl bg-yellow/10 items-center">
-        <IconExclamationCircle className="size-6 shrink-0 cursor-pointer text-yellow" />
+        <IconExclamationCircle className="w-6 h-6 shrink-0 cursor-pointer text-yellow" />
         <div className="flex flex-col gap-1 items-start text-left">
           <h3 className="pt-1 font-kanit font-black text-[#F0F1F5] text-xs">
             Note:

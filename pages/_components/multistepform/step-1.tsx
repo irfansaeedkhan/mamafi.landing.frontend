@@ -119,7 +119,7 @@ export const Step1: React.FC<any> = ({ formMethods }) => {
       </div>
 
       <div className="mt-4 flex gap-2 p-3 border border-red rounded-xl bg-red/10 items-center">
-        <IconExclamationCircle className="size-6 shrink-0 cursor-pointer text-red" />
+        <IconExclamationCircle className="w-6 h-6 shrink-0 cursor-pointer text-red" />
         <div className="flex flex-col gap-1 items-start text-left">
           <h3 className="pt-1 font-kanit font-black text-[#F0F1F5] text-xs">
             Add an address compatible with the Ethereum Blockchain
