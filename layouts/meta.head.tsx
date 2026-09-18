@@ -2,7 +2,7 @@ import Head from "next/head";
 import { WEBSITE_URL } from "@/utils/site-urls";
 
 const SITE_URL = WEBSITE_URL;
-const SITE_TITLE = "Mamafi.io — #1 Global Hub for Meme Culture";
+const SITE_TITLE = "MamaFi — #1 Global Hub for Meme Culture";
 const SITE_DESCRIPTION =
   "World leaders cause chaos. The internet makes memes. Some turn into coins. This is MamaFi — the biggest Meme Coin Launchpad on Ethereum. Gas fees? On us.";
 const OG_IMAGE = `${SITE_URL}/images/logo-bg-550-420.png`;
@@ -18,9 +18,9 @@ const MetaHead = () => {
       <meta name="description" content={SITE_DESCRIPTION} />
       <meta
         name="keywords"
-        content="Mamafi,MamaFi.io,meme coin,web3,login,sign up"
+        content="MamaFi,meme coin,web3,login,sign up"
       />
-      <meta name="author" content="Mamafi.io" />
+      <meta name="author" content="MamaFi" />
       <meta name="robots" content="index,follow" />
       <meta name="google" content="notranslate" />
 
@@ -30,7 +30,7 @@ const MetaHead = () => {
       <meta property="og:title" content={SITE_TITLE} />
       <meta property="og:description" content={SITE_DESCRIPTION} />
       <meta property="og:url" content={`${SITE_URL}/`} />
-      <meta property="og:site_name" content="Mamafi.io" />
+      <meta property="og:site_name" content="MamaFi" />
       <meta property="og:image" itemProp="image" content={OG_IMAGE} />
       <meta property="og:image:width" content="550" />
       <meta property="og:image:height" content="420" />
