@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import cn from "@/utils/cn";
 import Link from "next/link";
 import Image from "next/image";
+import { APP_URL } from "@/utils/site-urls";
 import WhitepaperModalDesktop from "./whitepaper-download-desktop";
 import MobileNavDrawer from "./mobile-nav-drawer";
 
@@ -90,7 +91,7 @@ function Header() {
 
             <div className="relative w-44">
               <Link
-                href={`${process.env.NEXT_PUBLIC_APP_URL}/auth/login`}
+                href={`${APP_URL}/auth/login`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative px-3 py-2 flex items-center justify-center gap-2 primary-gradient-btn1 w-full overflow-hidden h-14 rounded-lg"

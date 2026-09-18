@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import AnimatedBox from "./animated.box";
 import { HeadingBox } from "./heading.box";
+import { APP_URL } from "@/utils/site-urls";
 
 const RealWorldNarrative: React.FC = () => {
   return (
@@ -75,7 +76,7 @@ const RealWorldNarrative: React.FC = () => {
           </p>
 
           <Link
-            href="https://app.mamafi.io/auth/register?ref=7GvoMSftow"
+            href={`${APP_URL}/auth/register?ref=7GvoMSftow`}
             target="_blank"
             rel="noopener noreferrer"
             className="primary-gradient-btn relative flex py-3 px-4 items-center justify-center gap-2 rounded-xl bg-gradient transition-shadow duration-300 hover:shadow-[0_10px_20px_0_rgba(0,0,0,0.40),0_1px_0_0_rgba(255,255,255,0.20)_inset,0_3px_0_0_#000,0_-3px_0_0_rgba(255,255,255,0.16)_inset] lgTab:h-[56px] lgTab:w-[219px]"

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { APP_URL } from "@/utils/site-urls";
 import { IconReddit, IconTelegram, IconX } from "../icons/social-icons";
 import WhitepaperDownloadMobile from "./whitepaper-download-mobile";
 
@@ -88,7 +89,7 @@ export default function MobileNavDrawer({
               </div>
             </div>
             <Link
-              href={`${process.env.NEXT_PUBLIC_APP_URL}/auth/login`}
+              href={`${APP_URL}/auth/login`}
               target="_blank"
               rel="noopener noreferrer"
               className="relative px-3 py-2 flex items-center justify-center gap-2 primary-gradient-btn1 w-full overflow-hidden h-14 rounded-lg"

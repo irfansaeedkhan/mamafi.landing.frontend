@@ -1,6 +1,7 @@
 import Head from "next/head";
+import { WEBSITE_URL } from "@/utils/site-urls";
 
-const SITE_URL = process.env.NEXT_PUBLIC_WEBSITE_URL || "https://mamafi.io";
+const SITE_URL = WEBSITE_URL;
 const SITE_TITLE = "Mamafi.io — #1 Global Hub for Meme Culture";
 const SITE_DESCRIPTION =
   "World leaders cause chaos. The internet makes memes. Some turn into coins. This is MamaFi — the biggest Meme Coin Launchpad on Ethereum. Gas fees? On us.";
